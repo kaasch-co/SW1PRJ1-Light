@@ -2,9 +2,18 @@
 #include "pwm.h"
 #include <avr/io.h>
 
+// Define guards - safe defaults
+#ifndef _PWM_DUTY_WEAK
 #define _PWM_DUTY_WEAK 15.0f
+#endif
+
+#ifndef _PWM_DUTY_STRONG
 #define _PWM_DUTY_STRONG 67.0f
+#endif
+
+#ifndef _PWM_FREQ
 #define _PWM_FREQ 10000U
+#endif
 
 
 void initLight() {
